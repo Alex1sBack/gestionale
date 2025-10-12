@@ -17,14 +17,8 @@ import anvil.server
 #
 
 @anvil.server.callable
-@anvil.server.portable_class
 def check_data(username, password):
-  if(not app_tables.user_data.has_row(username)):
-    return False
-    
-  givenPassword = app_tables.user_data.get(username)
-  if(givenPassword != None & givenPassword == password):
-    return True
+  givenPassword = app_tables.user_data.get(username=username, password=password)
 
-  return False
+  return givenPassword
   

@@ -1,7 +1,7 @@
 allow_embedding: false
 db_schema:
   user_data:
-    client: none
+    client: full
     columns:
     - admin_ui: {order: 1, width: 200}
       name: username
